@@ -1,0 +1,19 @@
+var admin = [
+            { email: "admin", senha: "senha123" },
+        ];
+
+        function validarLogin() {
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("password").value;
+
+            var adminEncontrado = admin.find(function (admin) {
+                return admin.email === email && admin.senha === senha;
+            });
+
+            if (adminEncontrado) {
+                alert("Login bem-sucedido!");
+                window.location.href = "...";
+            } else {
+                alert("E-mail ou senha incorretos. Tente novamente.");
+            }
+        }
